@@ -113,7 +113,6 @@ class Client:
         Wanikani refers to Radicals, Kanji, and Vocabulary as Subjects. This function allows you to fetch all of
         the subjects, regardless of the current level of the account that the API key is associated to. All parameters
         to this function are optional, and are for filtering the results.
-        are ignored, and the subject with that ID in question is fetched.
 
         :param int[] ids: Filters based on a list of IDs. Does not cause other parameters to be ignored.
         :param str[] types: The specific :class:`.models.Subject` types you wish to retrieve. Possible values are: ``["kanji", "vocabulary", "radicals"]``
@@ -121,7 +120,7 @@ class Client:
         :param int[] levels: Include only :class:`.models.Subject` from the specified levels.
         :param bool hidden: Return :class:`.models.Subject` which are or are not hidden from the user-facing application
         :param bool fetch_all: if set to True, instead of fetching only first page of results, will fetch them all.
-        :param  updated_after: Return results which have been updated after the timestamp
+        :param updated_after: Return results which have been updated after the timestamp
         :type updated_after: :class:`datetime.datetime`
         :return: An iterator over multiple :class:`models.Page` , in which the ``data`` field contains a list anything that is a :class:`.models.Subject`, e.g.:
 
